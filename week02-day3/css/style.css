@@ -1,0 +1,19 @@
+body{
+    margin: 0;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+    border: 1px solid gray;
+}
+.row{
+    margin: 10px 0;
+    border: 1px solid red;
+}
+.column{
+    width: 400px;
+    height: 200px;
+    background: green;
+    border: 1px solid black;
+    display: inline-block;
+}

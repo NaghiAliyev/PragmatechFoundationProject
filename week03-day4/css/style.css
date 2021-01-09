@@ -1,0 +1,39 @@
+*{
+    margin: 0px;
+    transition: all .4 linear;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+.column{
+    width: calc((100%/3));
+    
+    border: 1px solid gray;
+}
+.blog-item{
+    min-height: 425px;
+    border: 1px solid gray;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    padding: 15px;
+    position: relative;
+}
+.blog-item-img{
+    width: 100%;
+    height: 250px;
+}
+.blog-item-img img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+.blog-item h3{
+    margin: 30px 0px;
+}
+.blog-item-info{
+    padding: 15px 0;
+}
+.blog-item-date{
+    
+}

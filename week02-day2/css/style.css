@@ -1,0 +1,54 @@
+body{
+    margin: 0;
+}
+
+#header{
+    height: 700px;
+    background: blue url('../img/slider-mainbg-001.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center -16px;
+}
+.header-navbar{
+    background-color: white;
+    /* height: 100px; */
+    /* padding: 35px 0; */
+    background: rgba(255, 255, 255, .8);
+}
+.navbar-nav{
+    width: 1200px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar-logo{
+    width: 150px;
+}
+.navbar-logo img{
+    width: 150px;
+}
+.navbar-links{
+}
+.navbar-links ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;    
+    align-items: center;
+    
+}
+.navbar-links ul li{
+    list-style: none;
+    padding: 40px 15px; 
+    box-sizing: border-box;
+    transition: all 0.3s linear;
+}
+.navbar-links ul li:hover{
+    border-bottom: 1px solid gray;
+    color: darkblue;
+    cursor: pointer;
+}
+.header-slider{
+    border: 1px solid blue;
+}
