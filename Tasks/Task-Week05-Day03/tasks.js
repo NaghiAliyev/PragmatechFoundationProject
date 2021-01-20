@@ -67,7 +67,7 @@ function findLongestDeadline(){
     luckyUser=userList[0];
     longestDeadline=luckyUser.userTasks[0].taskDeadline;
     indexOfLongestDeadLine=0;
-    for(i=1;i<userList.length;i++){
+    for(i=0;i<userList.length;i++){
         for(j=0;j<userList[i].userTasks.length;j++){
             if(longestDeadline<userList[i].userTasks[j].taskDeadline){
                 luckyUser=userList[i];
