@@ -78,6 +78,6 @@ function findLongestDeadline(){
     }
     console.log('The man who has the longest deadline : ' + luckyUser.name)
     console.log('The name of task with the longest deadline : ' + luckyUser.userTasks[indexOfLongestDeadLine].taskName)
-    console.log('The name of task with the longest deadline : ' + luckyUser.userTasks[indexOfLongestDeadLine].taskDeadline)
+    console.log('The longest deadline : ' + luckyUser.userTasks[indexOfLongestDeadLine].taskDeadline)
 }
     
