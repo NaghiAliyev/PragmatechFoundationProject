@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/129b631536.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <section id="slider">
+        <div class="slider-container">
+            <div class="image">
+                <img src="img/3.jfif" class="slide" alt="">
+                <div class="clickItem">
+                    <i class="fas fa-chevron-left fa-2x previous" onclick="previousSlide()"></i>
+                    <i class="fas fa-chevron-right fa-2x next" onclick="nextSlide()"></i>
+                </div>
+                <div class="about">
+                    <p></p>
+                </div>
+                
+            </div>
+            <div class="navigation-dots">
+                <div id="0" class="single-dot active" onclick="goToThis(this)"></div>
+                <div id="1" class="single-dot" onclick="goToThis(this)"></div>
+                <div id="2" class="single-dot" onclick="goToThis(this)"></div>
+                <div id="3" class="single-dot" onclick="goToThis(this)"></div>
+            </div>
+        </div>
+    </section>
+    <script src="js/task.js"></script>
+</body>
+</html>

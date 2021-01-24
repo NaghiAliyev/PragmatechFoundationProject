@@ -1,0 +1,57 @@
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h3 {
+  padding: 20px 0px;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.box {
+  height: 250px;
+  -webkit-box-shadow: 0px 0px 5px lightgray;
+          box-shadow: 0px 0px 5px lightgray;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.box img {
+  height: 250px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
+}
+
+.overlay img {
+  height: 70%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  border: 10px solid white;
+  -webkit-box-shadow: 0px 0px 5px white;
+          box-shadow: 0px 0px 5px white;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.overlay .xIcon {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  z-index: 5;
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */
