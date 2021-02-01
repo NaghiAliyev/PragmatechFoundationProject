@@ -1,0 +1,117 @@
+#navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 10%;
+}
+
+#navbar .logo {
+  cursor: pointer;
+  margin-right: auto;
+}
+
+#navbar img {
+  height: 100px;
+}
+
+#navbar .nav-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+#navbar .nav-links {
+  list-style: none;
+}
+
+#navbar .nav-links li {
+  display: inline-block;
+  padding: 0px 20px;
+  position: relative;
+}
+
+#navbar .nav-links li a {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+#navbar .nav-links li .link-container {
+  position: relative;
+}
+
+#navbar .nav-links li .bg {
+  position: absolute;
+  bottom: -5px;
+  left: -4px;
+  border-radius: 50px;
+  width: 25%;
+  height: 25%;
+  z-index: 0;
+  background-color: #FFE538;
+  background-image: linear-gradient(147deg, #edf0f1 0%, #0088a9 85%);
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+#navbar .nav-links li .link-container a:hover ~ .bg {
+  width: 85%;
+}
+
+#navbar .nav-links li a:hover {
+  color: #0088a9;
+}
+
+#navbar button {
+  margin-left: 20px;
+  padding: 9px 25px;
+  background-color: #0088a9;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+#navbar button:hover {
+  background-color: rgba(0, 136, 169, 0.8);
+}
+
+.top-nav-bar {
+  background: #3A4750;
+  color: #ffffff;
+  padding: 5px;
+  height: 50px;
+}
+
+.top-nav-bar ul {
+  list-style: none;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #EEEEEE;
+}
+
+li, a, button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #303841;
+  text-decoration: none;
+}
+/*# sourceMappingURL=style.css.map */
