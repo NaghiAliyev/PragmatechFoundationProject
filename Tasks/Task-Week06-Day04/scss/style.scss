@@ -1,0 +1,16 @@
+.meme-content{
+    position: relative;
+    height: 450px;
+    width: 600px;
+    object-fit: cover;
+    
+    .meme-img{
+        height: 100%;
+    }
+    .meme-text{
+        height: 50px;
+        width: 100%;
+        color: black;
+        background: rgb(161, 161, 161);
+    }
+}

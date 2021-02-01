@@ -1,0 +1,19 @@
+.meme-content {
+  position: relative;
+  height: 450px;
+  width: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.meme-content .meme-img {
+  height: 100%;
+}
+
+.meme-content .meme-text {
+  height: 50px;
+  width: 100%;
+  color: black;
+  background: #a1a1a1;
+}
+/*# sourceMappingURL=style.css.map */
