@@ -1,0 +1,23 @@
+.dropdown-content{
+    display: none;
+    position: absolute;
+    margin-top: 10px;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 100;
+    a {
+        color: black;
+        padding: 8px 12px;
+        font-size: 1.5rem;
+        text-decoration: none;
+        display: block;
+      }
+    
+}
+.down-icon{
+    display: inline-block;
+    transform: translate(2px,3px);
+    color: #303841;
+    
+}

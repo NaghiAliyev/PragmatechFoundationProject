@@ -4,6 +4,7 @@
     background: #fff;
     font-size: 1.6rem;
     padding: 10px 10%;
+    z-index: 15;
     .logo{
         cursor: pointer;
         margin-right: auto;
@@ -21,8 +22,9 @@
     }
     .nav-links li{
         display: inline-block;
-        padding: 0px 10px;
+        padding: 0px 15px;
         position: relative;
+        transition: all 0.5s ease;
 
     }
     .nav-links li a{
@@ -30,6 +32,7 @@
     }
     .nav-links li .link-container{
         position: relative;
+        display: inline-block;
     }
     .nav-links li .bg{
         position: absolute;
@@ -45,6 +48,12 @@
     }
     .nav-links li .link-container a:hover ~ .bg{
         width: 85%;
+    }
+    .nav-links .dd-effect:hover .dropdown-content{
+        display: block;
+    }
+    .nav-links .dd-effect:hover .down-icon{
+        color: #0088a9;
     }
     .nav-links li a:hover{
         color: #0088a9;
