@@ -1,13 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 #navbar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  position: fixed;
+  width: 100%;
+  background: #fff;
+  font-size: 1.6rem;
   padding: 10px 10%;
 }
 
@@ -30,12 +27,13 @@
 }
 
 #navbar .nav-links {
+  padding: 25px 0px;
   list-style: none;
 }
 
 #navbar .nav-links li {
   display: inline-block;
-  padding: 0px 20px;
+  padding: 0px 10px;
   position: relative;
 }
 
@@ -73,6 +71,7 @@
 #navbar button {
   margin-left: 20px;
   padding: 9px 25px;
+  color: #fff;
   background-color: #0088a9;
   border: none;
   border-radius: 50px;
@@ -85,15 +84,39 @@
   background-color: rgba(0, 136, 169, 0.8);
 }
 
+#navbar li, #navbar a, #navbar button {
+  color: #303841;
+}
+
 .top-nav-bar {
+  font-weight: 500;
+  font-size: 1.6rem;
   background: #3A4750;
   color: #ffffff;
-  padding: 5px;
-  height: 50px;
+  padding: 10px 0px;
+}
+
+.top-nav-bar .top-nav-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .top-nav-bar ul {
   list-style: none;
+  color: #ffffff;
+}
+
+.top-nav-bar ul li {
+  display: inline-block;
+  padding: 5px;
+}
+
+.top-nav-bar ul a {
+  color: #ffffff;
 }
 
 * {
@@ -101,17 +124,43 @@
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+html {
+  font-size: 10px;
 }
 
 body {
+  font-family: 'lato', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
   background-color: #EEEEEE;
 }
 
 li, a, button {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
-  font-size: 16px;
-  color: #303841;
   text-decoration: none;
+}
+
+a {
+  cursor: pointer;
+}
+
+.bootstrap-off {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+}
+
+#testing {
+  background: #543454;
+  height: 2000px;
 }
 /*# sourceMappingURL=style.css.map */

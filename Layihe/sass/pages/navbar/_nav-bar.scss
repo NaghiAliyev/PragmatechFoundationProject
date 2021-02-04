@@ -1,7 +1,8 @@
 #navbar{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    font-size: 1.6rem;
     padding: 10px 10%;
     .logo{
         cursor: pointer;
@@ -15,11 +16,12 @@
         justify-content: flex-end;
     }
     .nav-links{
+        padding: 25px 0px;
         list-style: none;
     }
     .nav-links li{
         display: inline-block;
-        padding: 0px 20px;
+        padding: 0px 10px;
         position: relative;
 
     }
@@ -50,6 +52,7 @@
     button{
         margin-left: 20px;
         padding: 9px 25px;
+        color: #fff;
         background-color: rgba(0, 136, 169, 1);
         border: none;
         border-radius: 50px;
@@ -58,5 +61,8 @@
     }
     button:hover{
         background-color: rgba(0, 136, 169, 0.8);
+    }
+    li,a,button{
+        color: #303841;
     }
 }
