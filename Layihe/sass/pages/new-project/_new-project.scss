@@ -1,0 +1,18 @@
+#new-project{
+    font-size: 1.6rem;
+    margin-bottom: 40px;
+    .content{
+        display: flex;
+        justify-content: space-between;
+    }
+    h3{
+        font-size: 3rem;
+    }
+    button{
+        padding: 10px 25px;
+        border-radius: 50px;
+        border: none;
+        background: #F6C90E;
+        color: #f2f2f2;
+    }
+}

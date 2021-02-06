@@ -7,9 +7,39 @@
         width: 100%;
         height: 700px;
         object-fit: cover;
+        animation: zoom 1s ease;
+    }
+    @keyframes zoom{
+        0%{transform: scale(2); opacity: 0;}
+        100%{transform: scale(1); opacity: 1;}
     }
     .box{
         position: relative;
+        height: 700px;
+        overflow: hidden;
+        margin-bottom: 30px;
+        .left-slide,.right-slide{
+            position: absolute;
+            top: 50%;
+            cursor: pointer;
+            color: #fff;
+            transform: translate(-50%);
+            z-index: 4;
+            transition: all .5s ease;
+        }
+        .right-slide{
+            right: 30px;
+        }
+        .left-slide{
+            left: 30px;
+            
+        }
+    }
+    .box-ch-content{
+        display: none;
+    }
+    .box-ch-content.active{
+        display: block;
     }
     .box-overlay{
         position: absolute;
@@ -39,10 +69,27 @@
         border: none;
         border-radius: 50px;
         cursor: pointer;
-        z-index: 4;
+        z-index: 3;
     }
     .read-more:hover{
         background: #19160B;
         color: #f2f2f2;
+    }
+    #myProgress{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        background: #ddd;
+        z-index: 3;
+    }
+    #myBar{
+        width: 0%;
+        height: 20px;
+        line-height: 20px;
+        background: #b8b8bb;
+        text-align: center;
+        color: #fff;
+        z-index: 3;
     }
 }
