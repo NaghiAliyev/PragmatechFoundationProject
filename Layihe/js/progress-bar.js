@@ -8,7 +8,6 @@ function run(){
     const myBar = document.getElementById('myBar');
     let width = 0;
     let slower = 1;
-    console.log('in')
     let timeInt = setInterval(frame, 50);
 
 //  barın sona qədər dolmasında və dolduqdan sonra sıfıra enməsində problem var.
@@ -18,6 +17,7 @@ function run(){
             clearInterval(timeInt);
             goTo('next');
             run();
+            // timeInt = setInterval(frame, 50);
 
         } else {
             width+= slower;

@@ -161,6 +161,7 @@
   height: 100rem;
   padding-top: calc(174px + 1rem);
   font-size: 1.6rem;
+  margin-bottom: -4rem;
   z-index: 1;
 }
 
@@ -169,8 +170,8 @@
   height: 700px;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-animation: zoom 1s ease;
-          animation: zoom 1s ease;
+  -webkit-animation: zoom 1.5s ease;
+          animation: zoom 1.5s ease;
 }
 
 @-webkit-keyframes zoom {
@@ -241,6 +242,8 @@
   height: 100%;
   width: 100%;
   background: rgba(0, 0, 0, 0.6);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   z-index: 2;
 }
 
@@ -257,7 +260,7 @@
   position: absolute;
   bottom: 20rem;
   left: 15rem;
-  padding: 9px 25px;
+  padding: 15px 25px;
   background: #F6C90E;
   color: #f2f2f2;
   border: none;
@@ -302,18 +305,79 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 10px;
 }
 
 #new-project h3 {
   font-size: 3rem;
 }
 
-#new-project button {
-  padding: 10px 25px;
-  border-radius: 50px;
+#new-project .btn-services {
+  padding: 5px 40px;
+  border-radius: 5px;
   border: none;
   background: #F6C90E;
   color: #f2f2f2;
+}
+
+#new-project .btn-services:hover {
+  background: #2A2F35;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+#partners {
+  margin-bottom: 30px;
+}
+
+#partners h3 {
+  font-weight: 400;
+}
+
+#partners .partners-slider {
+  width: 1170px;
+  position: relative;
+  margin: 0px auto;
+}
+
+#partners .partners-slider img {
+  cursor: pointer;
+}
+
+#partners .partners-slider .owl-prev {
+  position: absolute;
+  top: 50%;
+  left: -2%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#partners .partners-slider .owl-next {
+  position: absolute;
+  top: 50%;
+  right: -3%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#partners .partners-slider i {
+  font-size: 3em;
+}
+
+#faq-contact {
+  font-size: 1.6rem;
+}
+
+#faq-contact .faq, #faq-contact .contact {
+  padding-left: 10px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+#faq-contact .faq h3, #faq-contact .contact h3 {
+  text-align: center;
+  font-weight: 500;
+  font-size: 2rem;
 }
 
 #footer {

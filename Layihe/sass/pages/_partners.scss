@@ -1,0 +1,31 @@
+#partners{
+    margin-bottom: 30px;
+    h3{
+        font-weight: 400;
+    }
+    .partners-slider{
+        width: 1170px;
+        position: relative;
+        margin: 0px auto;
+        img{
+            cursor: pointer;
+        }
+        .owl-prev{
+            position: absolute;
+            top: 50%;
+            left: -2%;
+            transform: translate(-50%, -50%);
+        }
+        .owl-next{
+            position: absolute;
+            top: 50%;
+            right: -3%;
+            transform: translate(-50%, -50%);
+        }
+        i{
+            font-size: 3em;
+            // color: #fff;
+        }
+    }
+    
+}
