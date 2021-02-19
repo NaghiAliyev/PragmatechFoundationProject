@@ -14,14 +14,11 @@ def task_3():
     results = []
     dostlar = ['Ehmed', 'Memmed', 'Sabir', 'Efsane', 'Qurban']
     index=0
-    count=0
     for dost in dostlar:
         index+=1
-        # print(type(dost.find('a')))
-        if dost.find('a')>-1:
-            print(dost)
+        if dost.find('a')!=-1:
             results.append(index)
-        return results
+    return results
 
 def task_4():
     text = 'Baş nazir bildirib ki, müxtəlif sahələrdə əməkdaşlığımızı nəzərdə tutan bir çox sənədlər dünən keçirilən görüşlərdə imzalanıb: “Bu, çoxtərəfli platforma gələcək üçün böyük perspektivlər vəd edir. Əminəm ki, bu gün keçirilən iclasın nəticələri ikitərəfli münasibətlərin inkişafına da təkan verəcək. Prezident İlham Əliyev və Rəcəb Tayyib Ərdoğanın yorulmaz səyləri nəticəsində ölkələrimiz arasında münasibətlər ən yüksək səviyyəyə çatıb. Əməkdaşlığımız bütün sahələri əhatə edir. 2023-cü ilədək ticarət dövriyyəmizi 15 milyard dollara çatdırmaq əsas hədəflərimizdəndir'
@@ -32,18 +29,17 @@ def task_4():
     
 # -----------------------------------
 # task 1
-print(task_1(5,6))
+# print(task_1(5,6))
 
 # task 2
-print(task_2())
+# print(task_2())
 
 # task 3
 result = task_3()
-print(f'siyahida {len(result)-1} sayda a herfi olan element var')
-for element in result:
-    print(element)
-print(task_3())
+print(f'siyahida {len(result)} sayda a herfi olan element var')
+print(result)
+
 # task 4
-print(task_4())
+# print(task_4())
 
 # task 5
