@@ -9,4 +9,15 @@ def method_2(arr):
         counter+=1
 
     return counter
+
+# verilen massiv
+print('Verilen massiv:')
+print(myList)
+
+print('Massivde olan elementleri sayi : ')
+
+# hazir methoddan istifade ederek yazilib
+print(method_1(myList))
+
+# qismen algoritim istifade ederek yazilib
 print(method_2(myList))

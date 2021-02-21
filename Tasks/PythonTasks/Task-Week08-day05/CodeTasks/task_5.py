@@ -9,4 +9,11 @@ def repeatedNumbers(arr):
                 result.append(element)
     return result
 
+# verilen massiv
+print('Verilen massiv:')
+print(myList)
+
+print('Massivde tekrar olunan elementler : ')
+
+# hazir methoddan istifade ederek yazilib
 print(repeatedNumbers(myList))

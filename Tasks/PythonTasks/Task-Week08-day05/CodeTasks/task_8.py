@@ -6,5 +6,14 @@ def totalAmount(arr):
         total+=element
     return total
 
-print(totalAmount(myList))
+# verilen massiv
+print('Verilen massiv:')
+print(myList)
+
+print('Massivde olan elementlerin ceminin cap edilmesi : ')
+
+# hazir methoddan istifade ederek yazilib
 print(sum(myList))
+
+# qismen algoritim istifade ederek yazilib
+print(totalAmount(myList))
