@@ -1,11 +1,11 @@
 #contacts-content{
     padding-top: 120px;
-    height: 1500px;
-    background: gray;
-    color: #fff;
+    // height: 1500px;
+    // background: gray;
     font-size: 1.6rem;
     .head{
         padding: 20px 0px;
+        color: #fff;
         background: #302277;
         h2{
             padding: 0px 10px;
@@ -27,5 +27,33 @@
             }
         }
     }
-    
+    .form-control,.btn{
+        font-size: 1.6rem!important;
+    }
+    .form-control{
+        border: none;
+    }
+    .my-3r{
+        margin: 3rem 0px;
+    }
+    .contact-form{
+        border: 1px solid lightgray;
+        background: #f7f7f7;
+        padding: 20px;
+    }
+    .map{
+        border: 1px solid lightgray;
+        height: 350px;
+        width: 100%;
+        background: #f7f7f7;
+    }
+    .contact-data{
+        padding: 1.5rem 0;
+        .data-title{
+            padding: 1rem 0;
+        }
+        .sub-items{
+            padding: 0.3rem 0;
+        }
+    }
 }
