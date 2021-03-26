@@ -1,0 +1,42 @@
+#statistics{
+    font-size: 1.6rem;
+    padding: 25px 0px;
+    .statistitics-content{
+        display: flex;
+        justify-content: start;
+    }
+    img{
+        width: 100%;
+    }
+    .left-content{
+        padding-right:20px;
+    }
+    .ritht-content{
+        padding-left: 20px;
+    }
+    .statistic-data{
+        border: 1px solid gray;
+        background: #f2f2f2;
+        margin: 20px 0px;
+        padding: 25px 20px;
+        .statistic-container{
+            display: flex;
+            justify-content: center;
+            .changable-data{
+                // margin-left: 5rem;
+                font-size: 4rem;
+                font-weight: 500;
+                display: inline-block;
+            }
+            .static{
+                padding-top: 15px;
+                padding-left: 10px;
+                font-size: 2rem;
+                color: #7c7a7a;
+                display: inline-block;
+    
+            }
+        }
+        
+    }
+}

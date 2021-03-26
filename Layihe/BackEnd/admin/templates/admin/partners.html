@@ -1,0 +1,33 @@
+{% extends "admin/base.html" %}
+{% block title %}
+Əməkdaşlarımız
+{% endblock %}
+{% block page %}
+<div class="container">
+    <a href="/admin/partners/add"><button class="btn btn-primary">Əməkdaş əlavə et</button></a>
+    <h2>Əməkdaşlarımız</h2>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Sıra</th>
+            <th scope="col">Ad</th>
+            <th scope="col">Şəkli</th>
+            <th scope="col">Əməliyyat</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for partner in partners %}
+        <tr>
+            <th>{{partner.id}}</th>
+            <td>{{partner.name}}</td>
+            <td>{{partner.img}}</td>
+            <td>
+                <a href="/admin/partners/delete/{{partner.id}}"><i class="bi bi-trash"></i></a>
+                <a href="/admin/partners/update/{{partner.id}}"><i class="bi bi-pencil-square"></i></i></a>
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

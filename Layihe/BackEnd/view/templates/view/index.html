@@ -1,0 +1,215 @@
+{% extends "view/base.html" %}
+{% block title %}
+İnşaat Firması
+{% endblock %}
+{% block navBar %}
+<div id="navbar">
+    <div class="container">
+        <div class="nav-items">
+            <img class="logo" src="/view/static/view/img/logo_transparent2.png" alt="">
+            <ul class="nav-links d-flex justify-content-end bootstrap-off">
+                <li>
+                    <div class="link-container">
+                        <a class="bootstrap-off" href="/">Əsas Səhifə</a>
+                        <div class="bg" style="width: 90%!important;"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="link-container">
+                        <a class="bootstrap-off" href="/about">Haqqımızda</a>
+                        <div class="bg"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="link-container">
+                        <a class="bootstrap-off" href="/services">Xidmətlər</a>
+                        <div class="bg"></div>
+                    </div>
+                </li>
+                <li class="dd-effect">
+                    <div class="link-container">
+                        <a class="bootstrap-off" href="#">Proyektlər</a>
+                        <div class="down-icon"><i class="fas fa-angle-down fa-lg"></i></div>
+                        <div class="bg"></div>
+                        <div class="dropdown-content">
+                            <a href="/projects/ongoingprojects">Davam edən Proyektlər</a>
+                            <a href="/projects/finishedprojects">Bitmiş Proyektlər</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="link-container">
+                        <a class="bootstrap-off" href="/products">Məhsullar</a>
+                        <div class="bg"></div>
+                    </div>
+                </li>
+            </ul>
+            <a class="cta" href="/contacts"><button class=" text-light my-4">Əlaqə</button></a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block page %}
+<section id="header">
+    <div class="container">
+        <div class="box">
+            <div id="myProgress">
+                <div id="myBar"></div>
+            </div>
+            <div class="box-ch-contents">
+                {% for hSlide in hSlides %}
+                {% if hSlides.index(hSlide) == 0 %}
+                <div class="box-ch-content active">
+                    <img src="/view/static/view/img/{{hslide.img}}" alt="" class="img-fluid">
+                    <div class="box-overlay"></div>
+                    <div class="box-name">{{hslide.title}}</div>
+                    <div class="box-text">{{hslide.desc}}</div>
+                    <a href="{{hslide.read_more_url}}"><button class="read-more">Ətraflı Məlumat...</button></a>
+                </div>
+                {% else %}
+                <div class="box-ch-content">
+                    <img src="/view/static/view/img/{{hslide.img}}" alt="" class="img-fluid">
+                    <div class="box-overlay"></div>
+                    <div class="box-name">{{hslide.title}}</div>
+                    <div class="box-text">{{hslide.desc}}</div>
+                    <a href="{{hslide.read_more_url}}"><button class="read-more">Ətraflı Məlumat...</button></a>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+            <div class="left-slide"><i class="fas fa-angle-left fa-2x"></i></div>
+            <div class="right-slide"><i class="fas fa-angle-right fa-2x"></i></div>
+        </div>
+        <hr>
+    </div>
+</section>
+<section id="new-project">
+    <div class="container">
+        <div class="content">
+            <div class="text">
+                <h3>Yeni proyektlərə hazırlaşırsınız?</h3>
+                <p>İlk öncə bizim təklif etdiyimiz xidmətlərlə nəzər yetirin.</p>
+            </div>
+            <a href="/services"><button class="btn-services">Xidmətlər</button></a>
+        </div>
+    </div>
+</section>
+<section id="statistics">
+    <div class="container">
+        <div class="statistitics-content">
+            <div class="col-6 left-content">
+                <img src="{{url_for('view.static',filename='view/img/green-building.png')}}" alt="">
+            </div>
+            <div class="col-6 right-content">
+                <div class="statistics-text">
+                    <h3>Azərbaycanın tikinti şirkəti</h3>
+                    <h2>Tikinti firması</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio tenetur at perspiciatis distinctio
+                        omnis eum aperiam perferendis reprehenderit voluptate impedit pariatur laudantium totam ducimus,
+                        doloremque dolore ipsa, incidunt natus magnam!</p>
+                    <div class="statistic-data">
+                        <div class="statistic-container">
+                            <div class="changable-data">100+</div>
+                            <div class="static">Xoşbəxt müştəri</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section id="projectsInIndex">
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <h3>İcra etdiyimiz proyektlər</h3>
+                <h2>Tamamlanmış son layihələrimiz</h2>
+            </div>
+            <div class="col-2 offset-4">
+                <button class="show-all">Hamısına baxın</button>
+            </div>
+        </div>
+        <div class="col-1">
+            <hr>
+        </div>
+        <div class="projects-slider">
+            <div class="owl-carousel owl-theme">
+                <div class="item"><img src="{{url_for('view.static',filename='view/img/1.png')}}" alt=""></div>
+                <div class="item"><img src="{{url_for('view.static',filename='view/img/2.png')}}" alt=""></div>
+                <div class="item"><img src="{{url_for('view.static',filename='view/img/3.png')}}" alt=""></div>
+                <div class="item"><img src="{{url_for('view.static',filename='view/img/4.png')}}" alt=""></div>
+                <div class="item"><img src="{{url_for('view.static',filename='view/img/5.png')}}" alt=""></div>
+                <div class="item"><img src="{{url_for('view.static',filename='view/img/6.png')}}" alt=""></div>
+                <div class="item"><img src="{{url_for('view.static',filename='view/img/7.png')}}" alt=""></div>
+                <div class="item"><img src="{{url_for('view.static',filename='view/img/8.png')}}" alt=""></div>
+            </div>
+        </div>
+</section>
+<section id="principles">
+    <div class="content">
+        <h3>Üstünlüklərimiz</h3>
+        <h1>Əsas iş prinsiplərimiz</h1>
+        <div class="boxes">
+            <div class="box">
+                <div class="photo-section"></div>
+                <div class="principle-title">Title 1</div>
+                <p class="principle-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid minus fugit
+                    vitae facere in molestias doloremque fugiat magnam molestiae. Fuga similique provident ab explicabo,
+                    sapiente assumenda iusto, eaque eligendi est dolorem quae nemo voluptatum reiciendis.</p>
+            </div>
+            <div class="box">
+                <div class="photo-section"></div>
+                <div class="principle-title">Title 2</div>
+                <p class="principle-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid minus fugit
+                    vitae facere in molestias doloremque fugiat magnam molestiae. Fuga similique provident ab explicabo,
+                    sapiente assumenda iusto, eaque eligendi est dolorem quae nemo voluptatum reiciendis.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="partnersInIndex">
+    <div class="container">
+        <h3>Əməkdaşlıq etdiklərimiz</h3>
+        <h2>Birgə çalışdığımız şirkətlər</h2>
+        <div class="col-1">
+            <hr>
+        </div>
+        <div class="partners-slider">
+            <div class="owl-carousel owl-theme">
+                {% for partner in partners %}
+                <div class="item"><img src="/view/static/view/uploads/{{partner.img}} " onerror="this.src='/view/static/view/img/default_image.png'" alt=""></div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+<section id="faq-contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-5 faq">
+                <h3>Tez-tez soruşulan suallar</h3>
+                <div class="col-2 offset-5">
+                    <hr>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab itaque delectus praesentium
+                    dolor rerum. Possimus maxime eos laborum obcaecati alias odio saepe? Recusandae eaque culpa debitis
+                    id repudiandae cupiditate quidem, ipsum sapiente repellendus tempora!
+                </p>
+            </div>
+            <div class="col-5 contact offset-2">
+                <h3>Əlaqə</h3>
+                <div class="col-2 offset-5">
+                    <hr>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore doloremque temporibus nostrum nam
+                    dolorem! Cum iusto non tempora fugit ipsum.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

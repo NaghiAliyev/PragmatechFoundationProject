@@ -1,0 +1,18 @@
+{% extends "admin/base.html" %}
+{% block page %}
+<div class="container">
+    <h2>Slaydı yenilə</h2>
+    <form action="/admin/header_slider/update/{{hSlide.id}}" method="POST" enctype="multipart/form-data">
+        <div class="form-group my-2">
+            <input type="text" name="title" class="form-control" value="" value="{{hSlide.title}}" placeholder="Başlıq">
+        </div>
+        <div class="form-group my-2">
+            <input type="text" name="desc" class="form-control" value="{{hSlide.desc}}" placeholder="Qısa açıqlama">
+        </div>
+        <div class="form-group my-2">
+            <input type="file" name="img" class="form-control" value="{{hSlide.img}}" placeholder="Şəkil">
+        </div>
+        <input type="submit" value="Yenilə">
+      </form>
+</div>
+{% endblock %}

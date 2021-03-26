@@ -1,0 +1,97 @@
+#header{
+    height: 100rem;
+    padding-top: calc(174px + 1rem);
+    font-size: 1.6rem;
+    margin-bottom: -4rem;
+    z-index: 1;
+    .img-fluid{
+        width: 100%;
+        height: 700px;
+        object-fit: cover;
+        animation: zoom 1.5s ease;
+    }
+    @keyframes zoom{
+        0%{transform: scale(2); opacity: 0;}
+        100%{transform: scale(1); opacity: 1;}
+    }
+    .box{
+        position: relative;
+        height: 700px;
+        overflow: hidden;
+        margin-bottom: 30px;
+        .left-slide,.right-slide{
+            position: absolute;
+            top: 50%;
+            cursor: pointer;
+            color: #fff;
+            transform: translate(-50%);
+            z-index: 4;
+            transition: all .5s ease;
+        }
+        .right-slide{
+            right: 30px;
+        }
+        .left-slide{
+            left: 30px;
+            
+        }
+    }
+    .box-ch-content{
+        display: none;
+    }
+    .box-ch-content.active{
+        display: block;
+    }
+    .box-overlay{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        width: 100%;
+        background: rgba($color: #000000, $alpha: 0.6);
+        transition: all 0.5s;
+        z-index: 2;
+    }
+    .box-name{
+        position: absolute;
+        top: 15rem;
+        left: 7rem;
+        font-size: 2.5rem;
+        color: #f2f2f2;
+        z-index: 3;
+
+    }
+    .read-more{
+        position: absolute;
+        bottom: 10rem;
+        left: 15rem;
+        padding: 15px 25px;
+        background: #F6C90E;
+        color: #f2f2f2;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        z-index: 3;
+    }
+    .read-more:hover{
+        background: #19160B;
+        color: #f2f2f2;
+    }
+    #myProgress{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        background: #ddd;
+        z-index: 3;
+    }
+    #myBar{
+        width: 0%;
+        height: 20px;
+        line-height: 20px;
+        background: #b8b8bb;
+        text-align: center;
+        color: #fff;
+        z-index: 3;
+    }
+}

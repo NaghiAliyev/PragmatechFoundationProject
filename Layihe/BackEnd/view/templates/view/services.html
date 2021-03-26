@@ -1,0 +1,104 @@
+{% extends "view/base.html" %}
+{% block title %}
+Xidmətlər
+{% endblock %}
+{% block navBar %}
+<div id="navbar">
+    <div class="container">
+        <div class="nav-items">
+            <img class="logo" src="/view/static/view/img/logo_transparent2.png" alt="">
+            <ul class="nav-links d-flex justify-content-end bootstrap-off">
+                <li>
+                    <div class="link-container">
+                        <a class="bootstrap-off" href="/">Əsas Səhifə</a>
+                        <div class="bg"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="link-container">
+                        <a class="bootstrap-off" href="/about">Haqqımızda</a>
+                        <div class="bg"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="link-container">
+                        <a class="bootstrap-off" href="/services">Xidmətlər</a>
+                        <div class="bg" style="width: 90%!important;"></div>
+                    </div>
+                </li>
+                <li class="dd-effect">
+                    <div class="link-container">
+                        <a class="bootstrap-off" href="#">Proyektlər</a>
+                        <div class="down-icon"><i class="fas fa-angle-down fa-lg"></i></div>
+                        <div class="bg"></div>
+                        <div class="dropdown-content">
+                            <a href="/projects/ongoingprojects">Davam edən Proyektlər</a>
+                            <a href="/projects/finishedprojects">Bitmiş Proyektlər</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="link-container">
+                        <a class="bootstrap-off" href="/products">Məhsullar</a>
+                        <div class="bg"></div>
+                    </div>
+                </li>
+            </ul>
+            <a class="cta" href="/contacts"><button class=" text-light my-4">Əlaqə</button></a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block page %}
+<section id="services-content">
+    <div class="head">
+        <div class="container">
+            <h2>Xidmətlər</h2>
+            <div class="location">
+                <a href="/">Əsas səhifə</a>
+                <i class="fas fa-angle-right fa-lg"></i>
+                <p>Xidmətlər</p>
+            </div>
+        </div>            
+    </div>
+   <div class="container">
+    <div class="services-elements">
+        <div class="service-box">
+            <div class="img-section">
+                <img src="img/concrete.jpg" alt="">
+            </div>
+            <div class="service-title">
+                <h1>Firmanın Beton zavodu</h1>
+            </div>
+            <div class="service-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum earum dolore quibusdam qui ut veritatis cupiditate. Quia similique at quae. Assumenda vitae possimus voluptatibus hic porro odio? Sequi suscipit non voluptatum iste, officia neque dignissimos magni. Atque in laudantium quae!
+            </div>
+        </div>
+        <div class="service-box">
+            <div class="img-section">
+                <img src="img/iron.jpg" alt="">
+            </div>
+            <div class="service-title">
+                <h1>Firmanın dəmir sexi</h1>
+            </div>
+            <div class="service-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum earum dolore quibusdam qui ut veritatis cupiditate. Quia similique at quae. Assumenda vitae possimus voluptatibus hic porro odio? Sequi suscipit non voluptatum iste, officia neque dignissimos magni. Atque in laudantium quae!
+            </div>
+
+        </div>
+        <div class="service-box">
+            <div class="img-section">
+                <img src="img/wood.jpg" alt="">
+            </div>
+            <div class="service-title">
+                <h1>Firmanın taxta sexi</h1>
+            </div>
+            <div class="service-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum earum dolore quibusdam qui ut veritatis cupiditate. Quia similique at quae. Assumenda vitae possimus voluptatibus hic porro odio? Sequi suscipit non voluptatum iste, officia neque dignissimos magni. Atque in laudantium quae!
+            </div>
+        </div>
+    </div>
+   </div>
+</section>
+{% endblock %}
+    

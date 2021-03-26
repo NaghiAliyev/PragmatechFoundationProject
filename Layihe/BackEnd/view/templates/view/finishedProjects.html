@@ -1,0 +1,137 @@
+{% extends "view/base.html" %}
+{% block title %}
+Bitmiş Layihələr
+{% endblock %}
+{% block navBar %}
+<div id="navbar">
+    <div class="container">
+        <div class="nav-items">
+            <img class="logo" src="/view/static/view/img/logo_transparent2.png" alt="">
+            <ul class="nav-links d-flex justify-content-end bootstrap-off">
+                <li>
+                    <div class="link-container">
+                        <a class="bootstrap-off" href="/">Əsas Səhifə</a>
+                        <div class="bg"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="link-container">
+                        <a class="bootstrap-off" href="/about">Haqqımızda</a>
+                        <div class="bg"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="link-container">
+                        <a class="bootstrap-off" href="/services">Xidmətlər</a>
+                        <div class="bg"></div>
+                    </div>
+                </li>
+                <li class="dd-effect">
+                    <div class="link-container">
+                        <a class="bootstrap-off" href="#">Proyektlər</a>
+                        <div class="down-icon"><i class="fas fa-angle-down fa-lg"></i></div>
+                        <div class="bg"  style="width: 90%!important;"></div>
+                        <div class="dropdown-content">
+                            <a href="/projects/ongoingprojects">Davam edən Proyektlər</a>
+                            <a href="/projects/finishedprojects">Bitmiş Proyektlər</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="link-container">
+                        <a class="bootstrap-off" href="/products">Məhsullar</a>
+                        <div class="bg"></div>
+                    </div>
+                </li>
+            </ul>
+            <a class="cta" href="/contacts"><button class=" text-light my-4">Əlaqə</button></a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block page %}
+<section id="projects-content">
+        <div class="head">
+            <div class="container">
+                <h2>Tamamlanmış Layihələr</h2>
+                <div class="location">
+                    <a href="/">Əsas səhifə</a>
+                    <i class="fas fa-angle-right fa-lg"></i>
+                    <p>Layihələr</p>
+                    <i class="fas fa-angle-right fa-lg"></i>
+                    <p>Tamamlanmış Layihələr</p>
+                </div>
+            </div>   
+        </div>
+         <div id="finishedProjects">
+            <div class="fprojects">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xxl-3 col-lg-4 col-md-6">
+                            <div class="fproject">
+                                <div class="img-section">
+                                    <a href="details-finishedProjects.html">
+                                        <img src="img/concrete-product.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="fproject-title">
+                                    <h2>
+                                        Lorem ipsum dolor sit amet.
+                                    </h2>
+                                </div>
+                                <div class="fproject-description">
+                                    <ul>
+                                        <li>Lorem ipsum dolor sit.</li>
+                                        <li>Hic reprehenderit rem labore.</li>
+                                        <li>Cum optio aspernatur quaerat?</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xxl-3 col-lg-4 col-md-6">
+                            <div class="fproject">
+                                <div class="img-section">
+                                    <a href="details-finishedProjects.html">
+                                        <img src="img/concrete-product.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="fproject-title">
+                                    <h2>
+                                        Lorem ipsum dolor sit amet.
+                                    </h2>
+                                </div>
+                                <div class="fproject-description">
+                                    <ul>
+                                        <li>Lorem ipsum dolor sit.</li>
+                                        <li>Hic reprehenderit rem labore.</li>
+                                        <li>Cum optio aspernatur quaerat?</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xxl-3 col-lg-4 col-md-6">
+                            <div class="fproject">
+                                <div class="img-section">
+                                    <a href="details-finishedProjects.html">
+                                        <img src="img/concrete-product.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="fproject-title">
+                                    <h2>
+                                        Lorem ipsum dolor sit amet.
+                                    </h2>
+                                </div>
+                                <div class="fproject-description">
+                                    <ul>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>        
+    </section>
+{% endblock %}
+    

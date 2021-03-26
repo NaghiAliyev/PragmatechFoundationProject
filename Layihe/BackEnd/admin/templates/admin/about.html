@@ -1,0 +1,20 @@
+{% extends "admin/base.html" %}
+{% block title %}
+Haqqımızda
+{% endblock %}
+{% block page %}
+<div class="container">
+    <form action="/admin/about" method="POST" enctype="multipart/form-data">
+        <div class="form-group my-2">
+            <input type="text" class="form-control" name="title" placeholder="Başlıq">
+        </div>
+        <div class="form-group my-2">
+            <input type="text" class="form-control" name="desc" placeholder="Açıqlama">
+        </div>
+        <div class="form-group my-2">
+            <input type="file" class="form-control" name="img" placeholder="Şəkil">
+        </div>
+        <input type="submit" class="btn btn-secondary" value="Əlavə et">
+    </form>
+</div>
+{% endblock %}

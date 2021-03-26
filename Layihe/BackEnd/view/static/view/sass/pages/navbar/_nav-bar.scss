@@ -1,0 +1,79 @@
+#navbar{
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    font-size: 1.6rem;
+    padding: 10px 10%;
+    z-index: 15;
+    .logo{
+        cursor: pointer;
+        margin-right: auto;
+    }
+    img{
+        height: 100px;
+    }
+    .nav-items{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .nav-links{
+        padding: 25px 0px;
+        list-style: none;
+    }
+    .nav-links li{
+        display: inline-block;
+        padding: 0px 15px;
+        position: relative;
+        transition: all 0.5s ease;
+
+    }
+    .nav-links li a{
+        transition: all 0.3s ease 0s;
+    }
+    .nav-links li .link-container{
+        position: relative;
+        display: inline-block;
+    }
+    .nav-links li .bg{
+        position: absolute;
+        bottom: -5px;
+        left: -4px;
+        border-radius: 50px;
+        width: 25%;
+        height: 25%;
+        z-index: 0;
+        background-image: linear-gradient(147deg, #edf0f1 0%, #0088a9 85%);
+        transition: all .5s;
+    }
+    .nav-links li .link-container a:hover ~ .bg{
+        width: 85%;
+    }
+    .nav-links .dd-effect:hover .dropdown-content{
+        display: block;
+    }
+    .nav-links .dd-effect:hover .down-icon{
+        color: #0088a9;
+    }
+    .nav-links li a:hover{
+        color: #0088a9;
+    }
+    button{
+        margin-left: 20px;
+        padding: 9px 25px;
+        color: #fff;
+        background-color: rgba(0, 136, 169, 1);
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+    }
+    button:hover{
+        background-color: rgba(0, 136, 169, 0.8);
+    }
+    li,a,button{
+        color: #303841;
+    }
+    .active ~ .bg{
+        width: 85%;
+    }
+}

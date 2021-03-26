@@ -1,0 +1,26 @@
+{% extends "admin/base.html" %}
+{% block title %}
+Haqqımızda Səhifəsi
+{% endblock %}
+{% block page %}
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Title</th>
+        <th scope="col">Description</th>
+        <th scope="col">Image</th>
+      </tr>
+    </thead>
+    <tbody>
+     {% for data in datas %}
+     <tr>
+        <th>{{data.id}}</th>
+        <td>{{data.title}}</td>
+        <td>{{data.desc}}</td>
+        <td>{{data.img}}</td>
+      </tr>
+     {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

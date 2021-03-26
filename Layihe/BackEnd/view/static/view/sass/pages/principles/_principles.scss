@@ -1,0 +1,35 @@
+#principles{
+    font-size: 1.6rem;
+    margin-bottom: 60px !important;
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+    background-image: url('../img/principles-bg.jpg');
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    height: 700px;
+    display: flex;
+    justify-content: flex-end;
+    .content{
+        margin-top: 100px;
+        width: 50%;
+        margin-right: 200px;
+        text-align: center;
+        .boxes{
+            margin: 20px;
+            display: flex;
+            justify-content: space-between;
+            .box{
+                background: #fff;
+                margin: 10px;
+                padding: 15px;
+                .photo-section{
+                    margin: 15px auto;
+                    background: #B8B8B8;
+                    height: 75px;
+                    width: 75px;
+                }
+            }
+        }
+    }
+}

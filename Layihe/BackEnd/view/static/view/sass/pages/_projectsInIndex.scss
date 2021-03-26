@@ -1,0 +1,43 @@
+#projectsInIndex{
+    margin-bottom: 30px;
+    font-size: 1.6rem;
+    h3{
+        font-weight: 400;
+    }
+    .projects-slider{
+        width: 1170px;
+        position: relative;
+        margin: 0px auto;
+        img{
+            cursor: pointer;
+        }
+        .owl-prev{
+            position: absolute;
+            top: 50%;
+            left: -2%;
+            transform: translate(-50%, -50%);
+        }
+        .owl-next{
+            position: absolute;
+            top: 50%;
+            right: -4%;
+            transform: translate(-50%, -50%);
+        }
+        i{
+            font-size: 3em;
+        }
+
+    }
+    .show-all{
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background: #33A0BA;
+        color: #fff;
+    }
+    .show-all:hover,
+    .show-all:focus {
+        box-shadow: 0 0.5em 0.5em -0.4em lightblue;
+        transform: translateY(-0.25em);
+    }
+}

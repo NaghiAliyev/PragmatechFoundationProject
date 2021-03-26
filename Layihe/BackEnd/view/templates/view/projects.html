@@ -1,0 +1,61 @@
+{% extends "view/base.html" %}
+{% block navBar %}
+<div id="navbar">
+    <div class="container">
+        <div class="nav-items">
+            <img class="logo" src="/view/static/view/img/logo_transparent2.png" alt="">
+            <ul class="nav-links d-flex justify-content-end bootstrap-off">
+                <li>
+                    <div class="link-container">
+                        <a class="bootstrap-off" href="/">Əsas Səhifə</a>
+                        <div class="bg"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="link-container">
+                        <a class="bootstrap-off" href="/about">Haqqımızda</a>
+                        <div class="bg"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="link-container">
+                        <a class="bootstrap-off" href="/services">Xidmətlər</a>
+                        <div class="bg"></div>
+                    </div>
+                </li>
+                <li class="dd-effect">
+                    <div class="link-container">
+                        <a class="bootstrap-off" href="#">Proyektlər</a>
+                        <div class="down-icon"><i class="fas fa-angle-down fa-lg"></i></div>
+                        <div class="bg"  style="width: 90%!important;"></div>
+                        <div class="dropdown-content">
+                            <a href="/projects/ongoingprojects">Davam edən Proyektlər</a>
+                            <a href="/projects/finishedprojects">Bitmiş Proyektlər</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="link-container">
+                        <a class="bootstrap-off" href="/products">Məhsullar</a>
+                        <div class="bg"></div>
+                    </div>
+                </li>
+            </ul>
+            <a class="cta" href="/contacts"><button class=" text-light my-4">Əlaqə</button></a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block page %}
+<section id="projects-content">
+    <div class="head">
+        <div class="container">
+            <h2>Layihələr</h2>
+            <div class="location">
+                <a href=".">Əsas səhifə</a>
+                <i class="fas fa-angle-right fa-lg"></i>
+                <p>Layihələr</p>
+            </div>
+        </div>            
+</section>
+{% endblock %}

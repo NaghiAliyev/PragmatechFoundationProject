@@ -1,0 +1,23 @@
+#new-project{
+    font-size: 1.6rem;
+    margin-bottom: 40px;
+    .content{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+    }
+    h3{
+        font-size: 3rem;
+    }
+    .btn-services{
+        padding: 20px 40px;
+        border-radius: 5px;
+        border: none;
+        background: #F6C90E;
+        color: #f2f2f2;
+    }
+    .btn-services:hover{
+        background: #2A2F35;
+        transform: scale(1.1);
+    }
+}

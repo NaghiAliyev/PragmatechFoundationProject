@@ -1,0 +1,23 @@
+.top-nav-bar{
+    font-weight: 500;
+    font-size: 1.6rem;
+    background: #3A4750;
+    color: #ffffff;
+    padding: 10px 0px;
+    .top-nav-items{
+        display: flex;
+        justify-content: space-between;
+    }
+    ul{        
+        // display: inline-block;
+        list-style: none;
+        color: #ffffff;
+        li{
+            display: inline-block;
+            padding: 5px;
+        }
+        a{
+            color: #ffffff  ;
+        }
+    }
+}
