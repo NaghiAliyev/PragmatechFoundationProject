@@ -20,11 +20,11 @@
         <tr>
             <th>{{hSlide.id}}</th>
             <td>{{hSlide.title}}</td>
-            <td>{{hSlide.desc}}</td>
-            <td>{{hSlide.img}}</td>
+            <td>{{hSlide.description}}</td>
+            <td>{{hSlide.image}}</td>
             <td>
-                <a href="/admin/header_slider/delete/{{partner.id}}"><i class="bi bi-trash"></i></a>
-                <a href="/admin/header_slider/update/{{partner.id}}"><i class="bi bi-pencil-square"></i></i></a>
+                <a href="/admin/header_slider/delete/{{hSlide.id}}"><i class="bi bi-trash"></i></a>
+                <a href="/admin/header_slider/update/{{hSlide.id}}"><i class="bi bi-pencil-square"></i></i></a>
             </td>
         </tr>
         {% endfor %}

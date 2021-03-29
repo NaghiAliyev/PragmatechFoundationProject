@@ -3,29 +3,29 @@ let nextSlide = document.querySelector('.right-slide');
 let prevSlide = document.querySelector('.left-slide');
 let index = 0;
 let totalSlides = slides.length;
-
+const myBar = document.getElementById('myBar');
+let wControl =false;
 function run(){
-    const myBar = document.getElementById('myBar');
     let width = 0;
-    let slower = 1;
-    let timeInt = setInterval(frame, 50);
-
-//  barın sona qədər dolmasında və dolduqdan sonra sıfıra enməsində problem var.
-
+    if(wControl){
+        width=-20;
+    }
+    let timeInt = setInterval(frame, 100);
+    
+//  barın sona qədər dolmasında və dolduqdan sonra sıfıra enməsində problem var, qismən problem həll olundu.
     function frame() {
-        if (width >= 100) {
+        if (width >= 105) {
             clearInterval(timeInt);
+            myBar.style.display = "none";
             goTo('next');
+            wControl=true;
             run();
-            // timeInt = setInterval(frame, 50);
-
         } else {
-            width+= slower;
-            if(width >= 99 || width <= 1){
-                slower=0.25;
-            }else{
-                slower=1;
+            if(width==0){
+                myBar.style.display = "block";
             }
+            width+=1;
+            
             myBar.style.width = width + '%'
         }
     }
@@ -34,11 +34,11 @@ function run(){
 run();
 
 nextSlide.onclick = function(){
-    goTo('next')
+    goTo('next');
 }
 
 prevSlide.onclick = function(){
-    goTo('prev')
+    goTo('prev');
 }
 
 function goTo (direction){
@@ -62,3 +62,10 @@ function goTo (direction){
         slides[index].classList.add('active')
     }
 }
+function sleep(milliseconds) {
+    const date = Date.now();
+    let currentDate = null;
+    do {
+      currentDate = Date.now();
+    } while (currentDate - date < milliseconds);
+  }

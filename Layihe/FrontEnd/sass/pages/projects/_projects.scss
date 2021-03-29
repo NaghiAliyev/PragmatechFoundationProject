@@ -1,12 +1,10 @@
 #projects-content{
     padding-top: 120px;
-    height: 1500px;
-    background: gray;
-    color: #fff;
     font-size: 1.6rem;
     .head{
         padding: 20px 0px;
         background: #302277;
+        color: #fff;
         h2{
             padding: 0px 10px;
             font-size: 2.5rem;
@@ -27,5 +25,143 @@
             }
         }
     }
-    
+    #ongoingProjects{
+        .ogprojects{
+            display: flex;
+            justify-content: start;
+            padding: 10px;
+            margin: 30px 0;
+           .ogproject{
+                width: 300px;
+                padding: 10px;
+                margin: 0px 10px;
+                border: 1px solid #b3b3b3;
+                background: #fff;
+                color: black;
+                img{
+                    margin-top: 10px;
+                    max-width: 100%;
+                }
+                .ogproject-progress{
+                    color: red;
+                }
+            }
+        }
+    }
+    #details-ogproject{
+        display: flex;
+        margin: 30px 0;
+        justify-content: start;
+        .featured{
+            margin-top: 10px;
+            margin-right: 10px;
+            .featured-img{
+                height: 300px;
+                width: auto;
+                max-width: 100%;
+                object-fit: cover;
+                overflow: hidden;
+            }
+            .featured-title{
+                font-size: 2.5rem;
+                color: lightseagreen;
+                padding: 20px 0;
+            }
+            .featured-details{
+                .detail{
+                    border-bottom: 1px solid lightgray;
+                    p{
+                        display: inline;
+                    }
+                    .detail-title{
+                        font-weight: 600;
+                        padding-right: 5px;
+                    }
+                }
+            }
+        }
+        .images{
+            margin-left: 10px;
+            .other-images{
+                height: 500px;
+                width: auto;
+                max-width: 100%;
+                object-fit: cover;
+                overflow: hidden;
+                padding: 10px 0;
+            }
+        }
+    }
+    #finishedProjects{
+        .fprojects{
+            display: flex;
+            justify-content: start;
+            padding: 10px;
+            margin-bottom: 30px;
+           .fproject{
+                width: 300px;
+                padding: 10px;
+                margin: 0px 10px;
+                border: 1px solid #b3b3b3;
+                background: #fff;
+                color: black;
+                img{
+                    margin-top: 10px;
+                    max-width: 100%;
+                }
+                ul li{
+                    padding: 0px;
+                    margin: 0px;
+                    border-bottom: 1px solid #b4b4b4;
+                }
+            }
+        }
+    }
+    #details-fproject{
+        display: flex;
+        margin: 30px 0;
+        justify-content: start;
+        .featured{
+            margin-top: 10px;
+            margin-right: 10px;
+            .featured-img{
+                height: 300px;
+                width: auto;
+                max-width: 100%;
+                object-fit: cover;
+                overflow: hidden;
+            }
+            .featured-title{
+                font-size: 2.5rem;
+                color: lightseagreen;
+                padding: 20px 0;
+            }
+            .featured-details{
+                .detail{
+                    border-bottom: 1px solid lightgray;
+                    p{
+                        display: inline;
+                    }
+                    .detail-title{
+                        font-weight: 600;
+                        padding-right: 5px;
+                    }
+                }
+            }
+        }
+        .images{
+            margin-left: 10px;
+            .other-images{
+                height: 500px;
+                width: auto;
+                max-width: 100%;
+                object-fit: cover;
+                overflow: hidden;
+                padding: 10px 0;
+            }
+        }
+    }
+    .row{
+        margin-bottom: 15px;
+    }
 }

@@ -61,7 +61,7 @@ Bitmiş Layihələr
                 <i class="fas fa-angle-right fa-lg"></i>
                 <p>Tamamlanmış Layihələr</p>
                 <i class="fas fa-angle-right fa-lg"></i>
-                <p>{{}}</p>
+                <p>{{finProject.title}}</p>
             </div>
         </div>   
     </div>
@@ -69,41 +69,59 @@ Bitmiş Layihələr
         <div class="container">
             <div class="row">
                 <div class="col-4 featured">
-                    <img class="featured-img" src="img/1.jpg" alt="">
-                    <h2 class="featured-title">This is title</h2>
+                    <img class="featured-img" src="/view/static/view/uploads/{{finProject.image}}" alt="">
+                    <h2 class="featured-title">{{finProject.title}}</h2>
                     <div class="featured-details">
+                        {% if finProject.start_time != None %}
                         <div class="detail">
                             <p class="detail-title">
-                                detail title 1:
+                                Başlama tarixi : 
                             </p>
                             <p class="detail-content">
-                                detail1
+                                {{finProject.start_time}}
                             </p>
-                        </div>
+                        </div>  
+                        {% endif %}
+                        {% if finProject.finish_time != None %}
                         <div class="detail">
                             <p class="detail-title">
-                                detail title 2:
+                                Bitmə tarixi : 
                             </p>
                             <p class="detail-content">
-                                detail2
+                                {{finProject.finish_time}}
                             </p>
-                        </div>
+                        </div>  
+                        {% endif %}
+                        {% if finProject.area != None %}
                         <div class="detail">
                             <p class="detail-title">
-                                detail title 3:
+                                Sahəsi : 
                             </p>
                             <p class="detail-content">
-                                detail3
+                                {{finProject.area}}
                             </p>
-                        </div>
+                        </div>  
+                        {% endif %}
+                        {% if finProject.cost != None %}
                         <div class="detail">
                             <p class="detail-title">
-                                detail title 4:
+                                Dəyəri : 
                             </p>
                             <p class="detail-content">
-                                detail4
+                                {{finProject.cost}}
                             </p>
-                        </div>
+                        </div>  
+                        {% endif %}
+                        {% if finProject.location != None %}
+                        <div class="detail">
+                            <p class="detail-title">
+                                Ünvan : 
+                            </p>
+                            <p class="detail-content">
+                                {{finProject.location}}
+                            </p>
+                        </div>  
+                        {% endif %}
                     </div>
                 </div>
                 <div class="col-7 images">

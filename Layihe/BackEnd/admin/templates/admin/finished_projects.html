@@ -1,0 +1,34 @@
+{% extends "admin/base.html" %}
+{% block title %}
+Əməkdaşlarımız
+{% endblock %}
+{% block page %}
+<div class="container">
+    <a href="/admin/projects/finished_projects/add"><button class="btn btn-primary">Layihə Əlavə Et</button></a>
+    <h2>Bitmiş Layihələr</h2>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Sıra</th>
+            <th scope="col">Başlığı</th>
+            <th scope="col">Şəkli</th>
+            <th scope="col">Əməliyyatlar</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for fProject in fProjects %}
+        <tr>
+            <th>{{fProject.id}}</th>
+            <!-- <td><a href="/admin/projects/finished_projects/{{fProject.slugified_title}}">{{fProject.title}}</a></td> -->
+            <td>{{fProject.title}}</td>
+            <td>{{fProject.image}}</td>
+            <td>
+                <a href="/admin/projects/finished_projects/delete/{{fProject.id}}"><i class="bi bi-trash"></i></a>
+                <a href="/admin/projects/finished_projects/update/{{fProject.id}}"><i class="bi bi-pencil-square"></i></i></a>
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

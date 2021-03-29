@@ -12,7 +12,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
 db = SQLAlchemy(app)
 app.config['SECRET_KEY'] = '!Br_Ba3556!'
 app.config['UPLOAD_FOLDER']=upload_folder
-migrate=Migrate(app,db)
+migrate=Migrate(app, db, render_as_batch=True)
 
 from app import models
 

@@ -56,10 +56,18 @@
         position: absolute;
         top: 15rem;
         left: 7rem;
-        font-size: 2.5rem;
+        font-size: 3.5rem;
         color: #f2f2f2;
         z-index: 3;
 
+    }
+    .box-text{
+        position: absolute;
+        top: 30rem;
+        left: 10rem;
+        font-size: 2.5rem;
+        color: #f2f2f2;
+        z-index: 3;
     }
     .read-more{
         position: absolute;

@@ -60,19 +60,19 @@
                 {% for hSlide in hSlides %}
                 {% if hSlides.index(hSlide) == 0 %}
                 <div class="box-ch-content active">
-                    <img src="/view/static/view/img/{{hslide.img}}" alt="" class="img-fluid">
+                    <img src="/view/static/view/uploads/{{hSlide.image}}" alt="" class="img-fluid">
                     <div class="box-overlay"></div>
-                    <div class="box-name">{{hslide.title}}</div>
-                    <div class="box-text">{{hslide.desc}}</div>
-                    <a href="{{hslide.read_more_url}}"><button class="read-more">Ətraflı Məlumat...</button></a>
+                    <div class="box-name">{{hSlide.title}}</div>
+                    <div class="box-text">{{hSlide.description}}</div>
+                    <a href="{{hSlide.read_more_url}}"><button class="read-more">Ətraflı Məlumat...</button></a>
                 </div>
                 {% else %}
                 <div class="box-ch-content">
-                    <img src="/view/static/view/img/{{hslide.img}}" alt="" class="img-fluid">
+                    <img src="/view/static/view/uploads/{{hSlide.image}}" alt="" class="img-fluid">
                     <div class="box-overlay"></div>
-                    <div class="box-name">{{hslide.title}}</div>
-                    <div class="box-text">{{hslide.desc}}</div>
-                    <a href="{{hslide.read_more_url}}"><button class="read-more">Ətraflı Məlumat...</button></a>
+                    <div class="box-name">{{hSlide.title}}</div>
+                    <div class="box-text">{{hSlide.description}}</div>
+                    <a href="{{hSlide.read_more_url}}"><button class="read-more">Ətraflı Məlumat...</button></a>
                 </div>
                 {% endif %}
                 {% endfor %}
