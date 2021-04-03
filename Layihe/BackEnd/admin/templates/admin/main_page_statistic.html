@@ -1,0 +1,32 @@
+{% extends "admin/base.html" %}
+{% block title %}
+Statistikalar
+{% endblock %}
+{% block page %}
+<div class="container">
+    <h2>Əsas səhifədəki prinsiplərimiz</h2>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Sıra</th>
+            <th scope="col">Başlıq</th>
+            <th scope="col">Açıqlama</th>
+            <th scope="col">Razı müştəri sayı</th>
+            <th scope="col">Əməliyyat</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th>{{mpStatistic.id}}</th>
+            <td>{{mpStatistic.title}}</td>
+            <td>{{mpStatistic.description}}</td>
+            <td>{{mpStatistic.static_value}}</td>
+            <td>{{mpStatistic.image}}</td>
+            <td>
+                <a href="/admin/mpstatistic/update/{{mpStatistic.id}}"><i class="bi bi-pencil-square"></i></i></a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}

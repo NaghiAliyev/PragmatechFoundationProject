@@ -1,0 +1,32 @@
+{% extends "admin/base.html" %}
+{% block title %}
+Əlaqə
+{% endblock %}
+{% block page %}
+<div class="container">
+    <h2>Əlaqə Məlumatları</h2>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Sıra</th>
+            <th scope="col">Telefon nömrəsi</th>
+            <th scope="col">E-mail adresi</th>
+            <th scope="col">İş Saatları</th>
+            <th scope="col">Məkan</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th>{{data.id}}</th>
+            <td>{{data.telephone}}</td>
+            <td>{{data.e_mail}}</td>
+            <td>{{data.working_time}}</td>
+            <td>{{data.location}}</td>
+            <td>
+                <a href="/admin/contact/update/{{data.id}}"><i class="bi bi-pencil-square"></i></i></a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}

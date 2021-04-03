@@ -1,0 +1,33 @@
+{% extends "admin/base.html" %}
+{% block title %}
+Davam edən layihələr
+{% endblock %}
+{% block page %}
+<div class="container">
+    <a href="/admin/projects/ongoing_projects/add"><button class="btn btn-primary">Layihə Əlavə Et</button></a>
+    <h2>Davam Edən Layihələr</h2>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Sıra</th>
+            <th scope="col">Başlığı</th>
+            <th scope="col">Şəkli</th>
+            <th scope="col">Əməliyyatlar</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for ogProject in ogProjects %}
+        <tr>
+            <th>{{ogProject.id}}</th>
+            <td>{{ogProject.title}}</td>
+            <td>{{ogProject.image}}</td>
+            <td>
+                <a href="/admin/projects/ongoing_projects/delete/{{ogProject.id}}"><i class="bi bi-trash"></i></a>
+                <a href="/admin/projects/ongoing_projects/update/{{ogProject.id}}"><i class="bi bi-pencil-square"></i></i></a>
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
