@@ -64,7 +64,24 @@ Məhsullar
     <div class="products">
         <div class="container">
             <div class="row">
+                {% for product in products %}
                 <div class="col-xxl-3 col-lg-4 col-md-6">
+                    <div class="product">
+                        <div class="img-section">
+                            <img src="/view/static/view/uploads/{{product.image}}" alt="">
+                        </div>
+                        <div class="product-title">
+                            <h2>
+                                {{product.title}}
+                            </h2>
+                        </div>
+                        <div class="product-description">
+                            {{product.description}}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                <!-- <div class="col-xxl-3 col-lg-4 col-md-6">
                     <div class="product">
                         <div class="img-section">
                             <img src="img/concrete-product.jpg" alt="">
@@ -137,9 +154,9 @@ Məhsullar
                             </ul>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-xxl-3 col-lg-4 col-md-6">
                     <div class="product">
                         <div class="img-section">
@@ -176,7 +193,7 @@ Məhsullar
                 </div>
                 <div class="col-xxl-3 col-lg-4 col-md-6"></div>
                 <div class="col-xxl-3 col-lg-4 col-md-6"></div>
-            </div>
+            </div> -->
         </div>
     </div>
 </section>

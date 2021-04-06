@@ -1,6 +1,6 @@
 {% extends "admin/base.html" %}
 {% block title %}
-Əməkdaşlarımız
+Prinsiplərimiz
 {% endblock %}
 {% block page %}
 <div class="container">
@@ -21,8 +21,8 @@
         <tr>
             <th>{{mpPrinciple.id}}</th>
             <td>{{mpPrinciple.title}}</td>
-            <td>{{mpPrinciple.desc}}</td>
-            <td>{{mpPrinciple.img}}</td>
+            <td>{{mpPrinciple.description}}</td>
+            <td>{{mpPrinciple.image}}</td>
             <td>
                 <a href="/admin/mpprinciples/delete/{{mpPrinciple.id}}"><i class="bi bi-trash"></i></a>
                 <a href="/admin/mpprinciples/update/{{mpPrinciple.id}}"><i class="bi bi-pencil-square"></i></i></a>

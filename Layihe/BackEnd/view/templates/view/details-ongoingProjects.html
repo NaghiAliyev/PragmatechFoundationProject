@@ -1,6 +1,6 @@
 {% extends "view/base.html" %}
 {% block title %}
-Bitmiş Layihələr
+Davam Edən Layihələr
 {% endblock %}
 {% block navBar %}
 <div id="navbar">
@@ -61,7 +61,7 @@ Bitmiş Layihələr
                 <i class="fas fa-angle-right fa-lg"></i>
                 <p>Davam edən Layihələr</p>
                 <i class="fas fa-angle-right fa-lg"></i>
-                <p>{{}}</p>
+                <p>{{ongProject.title}}</p>
             </div>
         </div>   
     </div>
@@ -69,47 +69,48 @@ Bitmiş Layihələr
         <div class="container">
             <div class="row">
                 <div class="col-4 featured">
-                    <img class="featured-img" src="img/1.jpg" alt="">
-                    <h2 class="featured-title">This is title</h2>
+                    <img class="featured-img" src="/view/static/view/uploads/{{featured_image}}" alt="">
+                    <h2 class="featured-title">{{ongProject.title}}</h2>
                     <div class="featured-details">
+                        {% if ongProject.start_time != None %}
                         <div class="detail">
                             <p class="detail-title">
-                                detail title 1:
+                                Başlama tarixi : 
                             </p>
                             <p class="detail-content">
-                                detail1
+                                {{ongProject.start_time}}
                             </p>
-                        </div>
+                        </div>  
+                        {% endif %} 
+                        {% if ongProject.progress != None %}
                         <div class="detail">
                             <p class="detail-title">
-                                detail title 2:
+                                İrəliləmə faizi : 
                             </p>
                             <p class="detail-content">
-                                detail2
+                                {{ongProject.progress}}
                             </p>
-                        </div>
+                        </div>  
+                        {% endif %}
+                        {% if ongProject.location != None %}
                         <div class="detail">
                             <p class="detail-title">
-                                detail title 3:
+                                Ünvan : 
                             </p>
                             <p class="detail-content">
-                                detail3
+                                {{ongProject.location}}
                             </p>
-                        </div>
-                        <div class="detail">
-                            <p class="detail-title">
-                                detail title 4:
-                            </p>
-                            <p class="detail-content">
-                                detail4
-                            </p>
-                        </div>
+                        </div>  
+                        {% endif %}
                     </div>
                 </div>
                 <div class="col-7 images">
-                    <img src="img/2.jpg" alt="" class="other-images">
-                    <img src="img/3.jpg" alt="" class="other-images">
-                    <img src="img/4.jpg" alt="" class="other-images">
+                    {% for image in ongProject.images %}
+                    {% if ongProject.images.index(image) != 0 %}
+                    <img src="/view/static/view/uploads/{{image.filename}}" alt="" class="other-images">
+                    {% endif %}
+                    {% endfor %}
+                    {{ongProject.description|safe}}
                 </div>
             </div>
         </div>

@@ -98,18 +98,16 @@
     <div class="container">
         <div class="statistitics-content">
             <div class="col-6 left-content">
-                <img src="{{url_for('view.static',filename='view/img/green-building.png')}}" alt="">
+                <img src="/view/static/view/uploads/{{statistic.image}}" alt="">
             </div>
             <div class="col-6 right-content">
                 <div class="statistics-text">
                     <h3>Azərbaycanın tikinti şirkəti</h3>
-                    <h2>Tikinti firması</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio tenetur at perspiciatis distinctio
-                        omnis eum aperiam perferendis reprehenderit voluptate impedit pariatur laudantium totam ducimus,
-                        doloremque dolore ipsa, incidunt natus magnam!</p>
+                    <h2>{{statistic.title}}</h2>
+                    <p>{{statistic.description}}</p>
                     <div class="statistic-data">
                         <div class="statistic-container">
-                            <div class="changable-data">100+</div>
+                            <div class="changable-data">{{statistic.static_value}}+</div>
                             <div class="static">Xoşbəxt müştəri</div>
                         </div>
                     </div>
@@ -127,7 +125,7 @@
                 <h2>Tamamlanmış son layihələrimiz</h2>
             </div>
             <div class="col-2 offset-4">
-                <button class="show-all">Hamısına baxın</button>
+                <a href="/projects/finishedprojects"><button class="show-all">Hamısına baxın</button></a>                
             </div>
         </div>
         <div class="col-1">
@@ -135,14 +133,9 @@
         </div>
         <div class="projects-slider">
             <div class="owl-carousel owl-theme">
-                <div class="item"><img src="{{url_for('view.static',filename='view/img/1.png')}}" alt=""></div>
-                <div class="item"><img src="{{url_for('view.static',filename='view/img/2.png')}}" alt=""></div>
-                <div class="item"><img src="{{url_for('view.static',filename='view/img/3.png')}}" alt=""></div>
-                <div class="item"><img src="{{url_for('view.static',filename='view/img/4.png')}}" alt=""></div>
-                <div class="item"><img src="{{url_for('view.static',filename='view/img/5.png')}}" alt=""></div>
-                <div class="item"><img src="{{url_for('view.static',filename='view/img/6.png')}}" alt=""></div>
-                <div class="item"><img src="{{url_for('view.static',filename='view/img/7.png')}}" alt=""></div>
-                <div class="item"><img src="{{url_for('view.static',filename='view/img/8.png')}}" alt=""></div>
+                {% for fProject in fProjects %}
+                <div class="item"><img src="/view/static/view/uploads/{{fProject.image}}" alt=""></div>
+                {% endfor %}
             </div>
         </div>
 </section>
@@ -151,20 +144,13 @@
         <h3>Üstünlüklərimiz</h3>
         <h1>Əsas iş prinsiplərimiz</h1>
         <div class="boxes">
+            {% for principle in principles %}
             <div class="box">
-                <div class="photo-section"></div>
-                <div class="principle-title">Title 1</div>
-                <p class="principle-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid minus fugit
-                    vitae facere in molestias doloremque fugiat magnam molestiae. Fuga similique provident ab explicabo,
-                    sapiente assumenda iusto, eaque eligendi est dolorem quae nemo voluptatum reiciendis.</p>
+                <div class="photo-section"><img src="/view/static/view/uploads/{{principle.image}}" alt=""></div>
+                <div class="principle-title">{{principle.title}}</div>
+                <p class="principle-text">{{principle.description}}</p>
             </div>
-            <div class="box">
-                <div class="photo-section"></div>
-                <div class="principle-title">Title 2</div>
-                <p class="principle-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid minus fugit
-                    vitae facere in molestias doloremque fugiat magnam molestiae. Fuga similique provident ab explicabo,
-                    sapiente assumenda iusto, eaque eligendi est dolorem quae nemo voluptatum reiciendis.</p>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>
@@ -184,32 +170,4 @@
         </div>
     </div>
 </section>
-<section id="faq-contact">
-    <div class="container">
-        <div class="row">
-            <div class="col-5 faq">
-                <h3>Tez-tez soruşulan suallar</h3>
-                <div class="col-2 offset-5">
-                    <hr>
-                </div>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab itaque delectus praesentium
-                    dolor rerum. Possimus maxime eos laborum obcaecati alias odio saepe? Recusandae eaque culpa debitis
-                    id repudiandae cupiditate quidem, ipsum sapiente repellendus tempora!
-                </p>
-            </div>
-            <div class="col-5 contact offset-2">
-                <h3>Əlaqə</h3>
-                <div class="col-2 offset-5">
-                    <hr>
-                </div>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore doloremque temporibus nostrum nam
-                    dolorem! Cum iusto non tempora fugit ipsum.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
 {% endblock %}

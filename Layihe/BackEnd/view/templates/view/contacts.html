@@ -88,20 +88,22 @@
                 
             </div>
             <div class="col-6">
-                <div class="map"></div>
+                <div class="map">
+                    <iframe src="{{data.gm_location}}"  style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
                 <div class="contact-data ">
                     <h2 class="data-title">
                         Əlaqə məlumatları
                     </h2>
                     <div class="sub-items">
-                        <h4 class="d-inline">Telefon : </h4> +99403011232
+                        <h4 class="d-inline">Telefon : </h4> {{data.telephone}}
                     </div>
                     <div class="sub-items">
-                        <h4 class="d-inline">E-mail : </h4> askus@insaat-firmasi.az
+                        <h4 class="d-inline">E-mail : </h4> {{data.e_mail}}
                     </div><div class="sub-items">
-                        <h4 class="d-inline">İş vaxtı : </h4> 08:00-18:00
+                        <h4 class="d-inline">İş vaxtı : </h4> {{data.working_time}}
                     </div><div class="sub-items">
-                        <h4 class="d-inline">Ünvan : </h4> Bakı, Bayıl qəsəbəsi
+                        <h4 class="d-inline">Ünvan : </h4> {{data.location}}
                     </div>
                 </div></div>
         </div>

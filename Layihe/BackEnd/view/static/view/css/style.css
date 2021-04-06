@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+ul li {
+  padding-left: 0px!important;
+}
 #navbar {
   position: fixed;
   width: 100%;
@@ -236,7 +239,7 @@
 
 #header .read-more {
   position: absolute;
-  bottom: 10rem;
+  bottom: 15rem;
   left: 15rem;
   padding: 15px 25px;
   background: #F6C90E;
@@ -322,7 +325,7 @@
 #principles .content .boxes {
   margin: 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 #principles .content .boxes .box {
@@ -333,9 +336,14 @@
 
 #principles .content .boxes .box .photo-section {
   margin: 15px auto;
-  background: #B8B8B8;
-  height: 75px;
-  width: 75px;
+  height: 100px;
+  width: 100px;
+  overflow: hidden;
+}
+
+#principles .content .boxes .box .photo-section img {
+  max-height: 100%;
+  object-fit: cover;
 }
 
 #partnersInIndex {
@@ -352,25 +360,25 @@
   margin: 0px auto;
 }
 
-#partnersInIndex .partners-slider img {
+.partners-slider img {
   cursor: pointer;
 }
 
-#partnersInIndex .partners-slider .owl-prev {
+.partners-slider .owl-prev {
   position: absolute;
   top: 50%;
   left: -2%;
   transform: translate(-50%, -50%);
 }
 
-#partnersInIndex .partners-slider .owl-next {
+.partners-slider .owl-next {
   position: absolute;
   top: 50%;
   right: -3%;
   transform: translate(-50%, -50%);
 }
 
-#partnersInIndex .partners-slider i {
+.partners-slider i {
   font-size: 3em;
 }
 
@@ -610,16 +618,21 @@
 
 #about-content .about-items .item-box {
   padding: 15px;
-  height: 350px;
+  height: 500px;
   background: #ddd;
-  margin: 0px 15px;
+  margin: 0px 10px;
 }
 
 #about-content .about-items .item-box .img-sec {
   margin: 10px auto;
-  height: 50px;
-  width: 50px;
+  height: 100px;
+  width: 100px;
   background: gray;
+}
+
+#about-content .about-items .item-box .img-sec img {
+  max-height: 100%;
+  object-fit: cover;
 }
 
 #about-content .about-items .item-box .title {
@@ -688,6 +701,10 @@
   height: 350px;
   width: 100%;
   background: #f7f7f7;
+}
+#contacts-content .map iframe{
+  width: 100%;
+  height: 100%;
 }
 
 #contacts-content .contact-data {
@@ -880,7 +897,7 @@
 #projects-content #finishedProjects .fprojects {
   display: flex;
   justify-content: start;
-  padding: 10px;
+  padding: 5px;
   margin-bottom: 30px;
 }
 
@@ -899,8 +916,8 @@
 }
 
 #projects-content #finishedProjects .fprojects .fproject ul li {
-  padding: 0px;
-  margin: 0px;
+  padding: 0px!important;
+  margin: 0px!important;
   border-bottom: 1px solid #b4b4b4;
 }
 

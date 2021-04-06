@@ -1,6 +1,6 @@
 {% extends "admin/base.html" %}
 {% block title %}
-Əməkdaşlarımız
+Tamamlanmış Layihələr
 {% endblock %}
 {% block page %}
 <div class="container">
@@ -19,9 +19,8 @@
         {% for fProject in fProjects %}
         <tr>
             <th>{{fProject.id}}</th>
-            <!-- <td><a href="/admin/projects/finished_projects/{{fProject.slugified_title}}">{{fProject.title}}</a></td> -->
             <td>{{fProject.title}}</td>
-            <td>{{fProject.image}}</td>
+            <td>{{fProject.images|length}} seçilmiş şəkil</td>
             <td>
                 <a href="/admin/projects/finished_projects/delete/{{fProject.id}}"><i class="bi bi-trash"></i></a>
                 <a href="/admin/projects/finished_projects/update/{{fProject.id}}"><i class="bi bi-pencil-square"></i></i></a>

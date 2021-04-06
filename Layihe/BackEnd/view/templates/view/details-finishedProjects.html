@@ -1,6 +1,6 @@
 {% extends "view/base.html" %}
 {% block title %}
-Bitmiş Layihələr
+Tamamlanmış Layihələr
 {% endblock %}
 {% block navBar %}
 <div id="navbar">
@@ -69,7 +69,7 @@ Bitmiş Layihələr
         <div class="container">
             <div class="row">
                 <div class="col-4 featured">
-                    <img class="featured-img" src="/view/static/view/uploads/{{finProject.image}}" alt="">
+                    <img class="featured-img" src="/view/static/view/uploads/{{featured_image}}" alt="">
                     <h2 class="featured-title">{{finProject.title}}</h2>
                     <div class="featured-details">
                         {% if finProject.start_time != None %}
@@ -125,9 +125,12 @@ Bitmiş Layihələr
                     </div>
                 </div>
                 <div class="col-7 images">
-                    <img src="img/2.jpg" alt="" class="other-images">
-                    <img src="img/3.jpg" alt="" class="other-images">
-                    <img src="img/4.jpg" alt="" class="other-images">
+                    {% for image in finProject.images %}
+                    {% if finProject.images.index(image) != 0 %}
+                    <img src="/view/static/view/uploads/{{image.filename}}" alt="" class="other-images">
+                    {% endif %}
+                    {% endfor %}
+                    {{finProject.description|safe}}
                 </div>
             </div>
         </div>
