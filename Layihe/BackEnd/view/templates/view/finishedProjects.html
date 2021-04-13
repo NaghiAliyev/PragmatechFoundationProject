@@ -75,18 +75,20 @@ Bitmiş Layihələr
                                         <img src="/view/static/view/uploads/{{finProject.images[0].filename}}" alt="">
                                     </a>
                                 </div>
-                                <div class="fproject-title">
-                                    <a href="/projects/finishedprojects/{{finProject.slugified_title}}">
-                                        <h2>
-                                            {{finProject.title}}
-                                        </h2>
-                                    </a>
-                                </div>
-                                <div class="fproject-description" >
-                                    <ul>
-                                        <li> <b>Başlama Tarixi</b> : {{finProject.start_time}}</li>
-                                        <li> <b>Bitmə Tarixi</b> : {{finProject.finish_time}}</li>
-                                    </ul>
+                                <div class="details">
+                                    <div class="fproject-title">
+                                        <a href="/projects/finishedprojects/{{finProject.slugified_title}}">
+                                            <h2>
+                                                {{finProject.title}}
+                                            </h2>
+                                        </a>
+                                    </div>
+                                    <div class="fproject-description" >
+                                        <ul>
+                                            <li> <b>Başlama Tarixi</b> : {{finProject.start_time}}</li>
+                                            <li> <b>Bitmə Tarixi</b> : {{finProject.finish_time}}</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>

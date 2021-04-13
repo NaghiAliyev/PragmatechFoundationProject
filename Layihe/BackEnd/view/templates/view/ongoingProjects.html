@@ -75,15 +75,23 @@ Davam edən Layihələr
                                     <img src="/view/static/view/uploads/{{ongProject.images[0].filename}}" alt="">
                                 </a>
                             </div>
-                            <div class="ogproject-title">
-                                <a href="/projects/ongoingprojects/{{ongProject.slugified_title}}">
-                                    <h2>
-                                        {{ongProject.title}}
-                                    </h2>
-                                </a>
-                            </div>
-                            <div class="ogproject-progress">
-                                {{ongProject.progress}}
+                            <div class="details">
+                                <div class="ogproject-title">
+                                    <a href="/projects/ongoingprojects/{{ongProject.slugified_title}}">
+                                        <h2>
+                                            {{ongProject.title}}
+                                        </h2>
+                                    </a>
+                                </div>
+                                <div class="ogproject-progress">
+                                    <div id="progress">
+                                        <div id="bar{{ongProject.id}}" class="bar">
+                                            <div class="detail">
+                                                {{ongProject.progress}}%
+                                            </div>
+                                        </div>
+                                    </div>                                
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -93,4 +101,30 @@ Davam edən Layihələr
         </div>
     </div>
 </section>
+{% endblock %}
+{% block scripts %}
+<script>
+    function run(barId,value){
+    const myBar = document.getElementById(barId);
+    let width = 0;
+    const detail = myBar.childNodes[1];
+    let timeInt = setInterval(frame, 20);
+    function frame() {
+        if (width >= value) {
+            clearInterval(timeInt);
+        } else {
+            if(value > 10){
+                detail.style.right = 5 +'px'
+            }
+            width+=1;
+            
+            myBar.style.width = width + '%';
+        }
+    }
+}
+let projects = {{data|safe}}
+for(var bar in projects){
+    run(bar,projects[bar]);
+}
+</script>
 {% endblock %}

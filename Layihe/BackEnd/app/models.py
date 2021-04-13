@@ -94,3 +94,11 @@ class ContactInformation(db.Model):
     working_time = db.Column(db.String(100))
     location = db.Column(db.String(100))
     gm_location = db.Column(db.String(100))
+
+
+class UserMessage(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    email = db.Column(db.String(100))
+    full_name = db.Column(db.String(100))
+    subject = db.Column(db.String(100))
+    content = db.Column(db.Text)

@@ -827,22 +827,41 @@ ul li {
 
 #projects-content #ongoingProjects .ogprojects .ogproject {
   width: 300px;
-  padding: 10px;
   margin: 0px 10px;
-  border: 1px solid #b3b3b3;
-  background: #fff;
+  background: #f7f7f7;
+  border: 1px solid #eee;
   color: black;
 }
 
 #projects-content #ongoingProjects .ogprojects .ogproject img {
-  margin-top: 10px;
   max-width: 100%;
 }
-
-#projects-content #ongoingProjects .ogprojects .ogproject .ogproject-progress {
-  color: red;
+#projects-content #ongoingProjects .ogprojects .ogproject .details {
+  padding: 10px;
 }
 
+#projects-content #ongoingProjects .ogprojects .ogproject .details .ogproject-progress {
+  color: #fff;
+}
+
+#projects-content #ongoingProjects .ogprojects .ogproject .details .ogproject-progress #progress {
+  width: 100%;
+  z-index: 1;
+}
+
+#projects-content #ongoingProjects .ogprojects .ogproject .details .ogproject-progress .bar {
+  position: relative;
+  width: 0;
+  height: 20px;
+  line-height: 20px;
+  background: #b8b8bb;
+  text-align: center;
+  color: #fff;
+  z-index: 1;
+}
+#projects-content #ongoingProjects .ogprojects .ogproject .details .ogproject-progress .bar .detail{
+ position: absolute; 
+}
 #projects-content #details-ogproject {
   display: flex;
   margin: 30px 0;
@@ -903,10 +922,9 @@ ul li {
 
 #projects-content #finishedProjects .fprojects .fproject {
   width: 300px;
-  padding: 10px;
   margin: 0px 10px;
-  border: 1px solid #b3b3b3;
-  background: #fff;
+  background: #f7f7f7;
+  border: 1px solid #eee;
   color: black;
 }
 
@@ -915,7 +933,20 @@ ul li {
   max-width: 100%;
 }
 
-#projects-content #finishedProjects .fprojects .fproject ul li {
+#projects-content #finishedProjects .fprojects .fproject .details {
+  padding: 10px;
+}
+
+#projects-content #finishedProjects .fprojects .fproject .details .fproject-title a {
+  color: #000;
+}
+
+#projects-content #finishedProjects .fprojects .fproject .details ul {
+  padding: 0px!important;
+  margin: 0px!important;
+}
+
+#projects-content #finishedProjects .fprojects .fproject .details ul li {
   padding: 0px!important;
   margin: 0px!important;
   border-bottom: 1px solid #b4b4b4;

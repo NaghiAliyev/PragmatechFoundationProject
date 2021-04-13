@@ -134,7 +134,7 @@
         <div class="projects-slider">
             <div class="owl-carousel owl-theme">
                 {% for fProject in fProjects %}
-                <div class="item"><img src="/view/static/view/uploads/{{fProject.image}}" alt=""></div>
+                <div class="item"><img src="/view/static/view/uploads/{{fProject.images[0].filename}}" alt=""></div>
                 {% endfor %}
             </div>
         </div>
@@ -170,4 +170,9 @@
         </div>
     </div>
 </section>
+{% endblock %}
+{% block scripts %}
+<script src="{{url_for('view.static',filename='view/js/progress-bar.js')}}"></script>
+<script src="{{url_for('view.static',filename='view/js/owl.carousel.min.js')}}"></script>
+<script src="{{url_for('view.static',filename='view/js/carousel-slider.js')}}"></script>
 {% endblock %}

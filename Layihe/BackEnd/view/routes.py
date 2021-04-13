@@ -31,7 +31,11 @@ def main_services():
 def main_projects_ongoingProjects():
     from app.models import OnGoingProject
     ongProjects = OnGoingProject.query.all()
-    return render_template('view/ongoingProjects.html',ongProjects = ongProjects)
+    projectsDict = {}
+    for ongProject in ongProjects:
+        barId = f'bar{ongProject.id}'
+        projectsDict[barId] = ongProject.progress
+    return render_template('view/ongoingProjects.html',ongProjects = ongProjects, data = projectsDict)
 
 @view.route("/projects/ongoingprojects/<slug>")
 def main_projects_ongoingProject(slug):
@@ -70,3 +74,28 @@ def main_contacts():
     from app.models import ContactInformation
     data = ContactInformation.query.get(1)
     return render_template('view/contacts.html', data = data)
+
+@view.route("/contacts/send_message", methods=["POST","GET"])
+def send_message():
+    from app.models import UserMessage
+    from app import db
+    from app import mail, Message,app
+    if request.method == "POST":
+        full_name = request.form['name']
+        email = request.form['email']
+        subject = request.form['subject']
+        content = request.form['message']
+        db.session.add(
+            UserMessage(
+                full_name = full_name, 
+                email = email,
+                subject = subject,
+                content = content 
+            )
+        )
+        db.session.commit()
+        msg = Message(subject, sender=app.config['MAIL_USERNAME'], recipients=['templatestemplate70@gmail.com'])
+        msg.body = content
+        mail.send(msg)
+        return redirect('/contacts')
+    return redirect('/contacts')

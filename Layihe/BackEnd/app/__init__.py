@@ -1,6 +1,7 @@
 from flask import render_template,redirect,request,Flask,Blueprint
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate, migrate
+from flask_mail import Mail, Message
 from admin.routes import admin_bp
 from view.routes import view
 from admin import routes
@@ -16,6 +17,14 @@ migrate=Migrate(app, db, render_as_batch=True)
 
 from app import models
 
+app.config['MAIL_SERVER']='smtp.gmail.com'
+app.config['MAIL_PORT'] = 465
+app.config['MAIL_USERNAME'] = 'tikinti.firmasi@gmail.com'
+app.config['MAIL_PASSWORD'] = 'TikintiFirmasi_123'
+app.config['MAIL_USE_TLS'] = False
+app.config['MAIL_USE_SSL'] = True
+
+mail = Mail(app)
 
 app.register_blueprint(admin_bp)
 app.register_blueprint(view)

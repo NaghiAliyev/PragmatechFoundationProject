@@ -90,9 +90,10 @@
         crossorigin="anonymous"></script>
     <script src="{{url_for('view.static',filename='view/js/jquery-3.5.1.js')}}"></script>
     <script src="{{url_for('view.static',filename='view/js/navbar-hiding.js')}}"></script>
-    <script src="{{url_for('view.static',filename='view/js/progress-bar.js')}}"></script>
-    <script src="{{url_for('view.static',filename='view/js/owl.carousel.min.js')}}"></script>
-    <script src="{{url_for('view.static',filename='view/js/carousel-slider.js')}}"></script>
+    {% block scripts %}
+    {% endblock %}
+    
+    
 </body>
 
 </html>

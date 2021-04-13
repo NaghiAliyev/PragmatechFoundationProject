@@ -43,9 +43,10 @@ def add_header_slider():
 # Delete Header Slide
 @admin_bp.route("/header_slider/delete/<id>")
 def delete_header_slider(id):
-    from app import db
+    from app import db,app
     from app.models import HeaderSlider
     hSlideForDelete = HeaderSlider.query.get(id)
+    os.remove(os.path.join(app.config['UPLOAD_FOLDER'],hSlideForDelete.image)) # upload file-dan silmek ucun 
     db.session.delete(hSlideForDelete)
     db.session.commit()
     return redirect('/admin/header_slider')
@@ -58,6 +59,8 @@ def update_header_slider(id):
     hSlideForUpdate = HeaderSlider.query.get(id)
     if request.method == "POST":
         
+        os.remove(os.path.join(app.config['UPLOAD_FOLDER'], hSlideForUpdate.image)) # upload file-dan silmek ucun 
+
         file = request.files['image']
         filename = secure_filename(file.filename)
         newName = f"photo_{slugify(request.form['title'],to_lower=True)}.{filename.split('.')[-1]}"
@@ -108,6 +111,7 @@ def delete_partner(id):
     from app import db
     from app.models import PartnerSlider
     partnerForDelete = PartnerSlider.query.get(id)
+    os.remove(os.path.join(app.config['UPLOAD_FOLDER'],partnerForDelete.img)) # upload file-dan silmek ucun 
     db.session.delete(partnerForDelete)
     db.session.commit()
     return redirect('/admin/partners')
@@ -120,6 +124,8 @@ def update_partner(id):
     partnerForUpdate = PartnerSlider.query.get(id)
     if request.method == "POST":
         
+        os.remove(os.path.join(app.config['UPLOAD_FOLDER'],partnerForUpdate.img)) # upload file-dan silmek ucun 
+
         file = request.files['img']
         filename = secure_filename(file.filename)
         newName = f"photo_{slugify(request.form['name'],to_lower=True)}.{filename.split('.')[-1]}"
@@ -169,6 +175,7 @@ def delete_main_page_principle(id):
     from app import db
     from app.models import MainPagePrinciple
     mpPrincipleForDelete = MainPagePrinciple.query.get(id)
+    os.remove(os.path.join(app.config['UPLOAD_FOLDER'],mpPrincipleForDelete.image)) # upload file-dan silmek ucun 
     db.session.delete(mpPrincipleForDelete)
     db.session.commit()
     return redirect('/admin/mpprinciples')
@@ -181,6 +188,8 @@ def update_main_page_principle(id):
     mpPrincipleForUpdate = MainPagePrinciple.query.get(id)
     if request.method == "POST":
         
+        os.remove(os.path.join(app.config['UPLOAD_FOLDER'],mpPrincipleForUpdate.image)) # upload file-dan silmek ucun 
+
         file = request.files['image']
         filename = secure_filename(file.filename)
         newName = f"photo_{slugify(request.form['title'])}.{filename.split('.')[-1]}"
@@ -211,6 +220,8 @@ def update_main_page_statistic(id):
     mpStatisticForUpdate = MainPageStatistic.query.get(id)
     if request.method == "POST":
         
+        os.remove(os.path.join(app.config['UPLOAD_FOLDER'],mpStatisticForUpdate.image)) # upload file-dan silmek ucun 
+
         file = request.files['image']
         filename = secure_filename(file.filename)
         newName = f"photo_{slugify(request.form['title'],to_lower=True)}.{filename.split('.')[-1]}"
@@ -244,6 +255,8 @@ def update_about_page(id):
     data = AboutPage.query.get(id)
     if request.method == "POST":
         
+        os.remove(os.path.join(app.config['UPLOAD_FOLDER'],data.image)) # upload file-dan silmek ucun 
+
         file = request.files['image']
         filename = secure_filename(file.filename)
         newName = f"photo_{slugify(request.form['title'],to_lower=True)}.{filename.split('.')[-1]}"
@@ -273,6 +286,8 @@ def update_about_page_principle(id):
     principleForUpdate = AboutPagePrinciple.query.get(id)
     if request.method == "POST":
         
+        os.remove(os.path.join(app.config['UPLOAD_FOLDER'],principleForUpdate.image)) # upload file-dan silmek ucun 
+
         file = request.files['image']
         filename = secure_filename(file.filename)
         newName = f"photo_{slugify(request.form['title'],to_lower=True)}.{filename.split('.')[-1]}"
@@ -555,6 +570,7 @@ def delete_service(id):
     from app.models import Service
     from app import db
     serviceForDelete = Service.query.get(id)
+    os.remove(os.path.join(app.config['UPLOAD_FOLDER'],serviceForDelete.image)) # upload file-dan silmek ucun 
     db.session.delete(serviceForDelete)
     db.session.commit()
     return redirect('/admin/services')
@@ -567,6 +583,8 @@ def update_service(id):
     serviceForUpdate = Service.query.get(id)
     if request.method == "POST":
         
+        os.remove(os.path.join(app.config['UPLOAD_FOLDER'],serviceForUpdate.image)) # upload file-dan silmek ucun 
+
         file = request.files['image']
         filename = secure_filename(file.filename)
         newName = f"photo_{slugify(request.form['title'],to_lower=True)}.{filename.split('.')[-1]}"
@@ -618,6 +636,7 @@ def delete_product(id):
     from app.models import Product
     from app import db
     productForDelete = Product.query.get(id)
+    os.remove(os.path.join(app.config['UPLOAD_FOLDER'],productForDelete.image)) # upload file-dan silmek ucun 
     db.session.delete(productForDelete)
     db.session.commit()
     return redirect('/admin/products')
@@ -630,6 +649,8 @@ def update_product(id):
     productForUpdate = Product.query.get(id)
     if request.method == "POST":
         
+        os.remove(os.path.join(app.config['UPLOAD_FOLDER'],productForUpdate.image)) # upload file-dan silmek ucun 
+
         file = request.files['image']
         filename = secure_filename(file.filename)
         newName = f"photo_{slugify(request.form['title'],to_lower=True)}.{filename.split('.')[-1]}"
@@ -643,7 +664,6 @@ def update_product(id):
         db.session.commit()
         return redirect('/admin/products')
     return render_template('admin/update_product.html', product = productForUpdate)
-
 
 
 # Contact Page Routes
@@ -672,5 +692,17 @@ def update_contact(id):
         contactForUpdate.location = location
         contactForUpdate.gm_location = gm_location.split('"')[1]
         db.session.commit()
+        os.remove(os.path.join(app.config['UPLOAD_FOLDER'],contactForUpdate.image)) # upload file-dan silmek ucun 
+
         return redirect('/admin/contact')
     return render_template('admin/update_contact.html', data = contactForUpdate)
+
+# Messages Routes
+
+@admin_bp.route("/messages")
+def index_messages():
+    from app.models import UserMessage
+    messages = UserMessage.query.all()
+    return render_template('admin/messages.html')
+
+# @admin_bp.route("/messages/add")
